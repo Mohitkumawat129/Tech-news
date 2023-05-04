@@ -1,5 +1,6 @@
 {
   "name": "technews",
+  "homepage": "https://tech-news-two.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
