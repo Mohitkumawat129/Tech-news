@@ -1,38 +1,143 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(109, 109, 142);
+}
+
+.search h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+}
+.search form {
+  position: relative;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
+.search h2 {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head_input {
+  position: relative;
+  top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  height: 7.5rem;
+}
+.search input {
+  font-size: 2rem;
+  padding: 6px 15px;
+  border-radius: 20px;
+  background-color: white;
+}
+.pagination {
+  position: relative;
+  top: 4rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 5rem;
+}
+.pagination button {
+  font-size: 1.5rem;
+  padding: 4px 10px;
+  margin: 0 15px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: wheat;
+}
+.pagination button:hover {
+  background-color: gray;
+  border: 3px solid black;
+}
+.pagination p {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+.stories {
+  position: relative;
+  top: 4rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.stories .news_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  margin: 10px 50px;
+  padding: 15px 20px;
+  height: 30vh;
+}
+.stories .news_box:hover {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.news_box p {
+  font-size: 1.3rem;
+}
+.news_box .stories_link {
+  position: relative;
+}
+.news_box .stories_link .link1 {
+  color: red;
+  border: 2px solid black;
+  padding: 0 6px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 2rem;
+  position: relative;
+  bottom: 21vh;
+  left: 37vw;
+  transition: all 0.2s;
+}
+.news_box .stories_link .link1:hover {
+  background-color: red;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.news_box .stories_link .link2 {
+  color: blue;
+  font-size: 1.5rem;
+  transition: all 0.2s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.news_box .stories_link .link2:hover {
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 1300px) {
+  .stories {
+    grid-template-columns: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .stories .news_box {
+    width: 75vw;
+  }
+  .news_box .stories_link .link1 {
+    left: 73vw;
+  }
+}
+@media (max-width: 700px) {
+  .news_box .stories_link .link1 {
+    left: 71vw;
+  }
+}
+@media (max-width: 450px) {
+  .news_box .stories_link .link1 {
+    bottom: 25vh;
+  }
+  .search h1 {
+    font-size: 2rem;
+  }
+  .search input {
+    font-size: 1.2rem;
+    padding: 2px 6.5px;
   }
 }
