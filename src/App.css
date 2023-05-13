@@ -73,71 +73,70 @@
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid black;
-  margin: 10px 50px;
+  margin: 15px 35px;
   padding: 15px 20px;
   height: 30vh;
+  position: relative;
 }
 .stories .news_box:hover {
   position: relative;
-  top: 10px;
-  left: 10px;
+  top: 5px;
+  left: 5px;
+}
+.stories .news_box h1 {
+  font-size: 2rem;
+  margin: 10px 20px;
+}
+.stories .removeBtn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  right: -18px;
+  top: -16px;
+  cursor: pointer;
+}
+.stories .removeBtn a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  left: 12.5px;
+}
+.stories .removeBtn:hover {
+  background-color: red;
+}
+.stories .removeBtn:hover a {
+  background-color: red;
 }
 .news_box p {
   font-size: 1.3rem;
 }
-.news_box .stories_link {
-  position: relative;
-}
-.news_box .stories_link .link1 {
-  color: red;
-  border: 2px solid black;
-  padding: 0 6px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 2rem;
-  position: relative;
-  bottom: 21vh;
-  left: 37vw;
-  transition: all 0.2s;
-}
-.news_box .stories_link .link1:hover {
-  background-color: red;
-  color: white;
-}
-.news_box .stories_link .link2 {
-  color: blue;
+.stories .news_box .link {
   font-size: 1.5rem;
-  transition: all 0.2s;
+  color: blue;
 }
-.news_box .stories_link .link2:hover {
-  cursor: pointer;
-  color: white;
+@media (max-width: 1000px) {
+  .stories .news_box {
+    padding: 7.5px 10px;
+    height: 35vh;
+  }
+  .stories .news_box h1 {
+    font-size: 1.5rem;
+    margin: 5px 10px;
+  }
 }
-@media (max-width: 1300px) {
+@media (max-width: 750px) {
   .stories {
+    display: grid;
     grid-template-columns: auto;
   }
-  .stories .news_box {
-    width: 75vw;
-  }
-  .news_box .stories_link .link1 {
-    left: 73vw;
-  }
 }
-@media (max-width: 700px) {
-  .news_box .stories_link .link1 {
-    left: 71vw;
-  }
-}
-@media (max-width: 450px) {
-  .news_box .stories_link .link1 {
-    bottom: 25vh;
-  }
-  .search h1 {
-    font-size: 2rem;
-  }
+@media (max-width: 750px) {
   .search input {
-    font-size: 1.2rem;
-    padding: 2px 6.5px;
+    font-size: 1.5rem;
+    padding: 3px 7.5px;
+    border-radius: 10px;
   }
 }
