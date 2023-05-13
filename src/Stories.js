@@ -27,20 +27,18 @@ const Stories = () => {
           const { title, author, objectID, url, num_comments } = cur;
           return (
             <div className="news_box" key={objectID}>
-              <h1 style={{ margin: "10px 20px" }}>{title}</h1>
+              <div className="removeBtn">
+                <a href="#" onClick={() => removePost(objectID)}>
+                  x
+                </a>
+              </div>
+              <h1>{title}</h1>
               <p>
                 By <span> {author} </span> | <span> {num_comments} </span>
                 comments
               </p>
               <div className="stories_link">
-                <a
-                  className="link1"
-                  href="#"
-                  onClick={() => removePost(objectID)}
-                >
-                  x
-                </a>
-                <a className="link2" href={url} target="_blank">
+                <a className="link" href={url} target="_blank">
                   Read more
                 </a>
               </div>
